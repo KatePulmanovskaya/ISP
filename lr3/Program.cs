@@ -12,13 +12,28 @@ namespace lr3
         private int date_release; //дата выпуска
         private string type; //тип транспорта
         private string food; //тип питания
-        public Transport (string type,int date, string food)//конструктор
-        {
+        public Transport (string type,int date, string food)//конструктор с 3 аргументами
+        { 
             this.type = type;
             this.date_release = date;
             this.food = food;
         }
 
+        public Transport(int date, string food)//конструктор с двумя аргументами
+        {
+            this.date_release = date;
+            type = "Автомобиль";
+            this.food = food;
+        }
+
+        public Transport(int date) //конструктор с одним аргументом
+        {
+            this.date_release = date;
+            type = "Автомобиль";
+            food = "Бензин";
+        }
+
+    
         public string Type
         {
             get
@@ -68,13 +83,20 @@ namespace lr3
     {
         private string color; //цвет автомобиля
         private static int instances = 0; //счетчик
-        public Car(int date, string food, string color, string type = "Автомобиль") : base(type,date,food)//конруктор
+        public Car(int date, string food, string color) : base(date,food)//конруктор
         {
             
             this.color = color;
             instances++;
         }
-       
+
+        public Car(int date, string color) : base(date)//конруктор
+        {
+
+            this.color = color;
+            instances++;
+        }
+
         public string Color
         {
             get
@@ -109,6 +131,11 @@ namespace lr3
             this.model = model;
         }
 
+        public Honda(int date, string color, string model) : base(date, color) //конруктор
+        {
+            this.model = model;
+        }
+
         public string Model
         {
             get
@@ -132,6 +159,11 @@ namespace lr3
     {
         private string model; //номер модели
         public Opel(int date, string food, string color, string model) : base(date, food, color)//конруктор
+        {
+            this.model = model;
+        }
+
+        public Opel(int date, string color, string model) : base(date, color)//конруктор
         {
             this.model = model;
         }
@@ -163,6 +195,12 @@ namespace lr3
         {
             this.model = model;
         }
+
+        public BMW(int date, string color, string model) : base(date, color)//конруктор
+        {
+            this.model = model;
+        }
+
         public string Model
         {
             get
@@ -193,15 +231,15 @@ namespace lr3
             Console.WriteLine();
             Car.HowManyCars();
             Console.WriteLine();
-            Car avto = new Car(2014, "Бензин", "Белый");
+            Car avto = new Car(2014, "Белый");
             avto.ShowInfo();
             Console.WriteLine();
-            Honda honda = new Honda(2013, "Бензин", "Черный", "CR-V IV");
+            Honda honda = new Honda(2013, "Черный", "CR-V IV");
             honda.ShowInfo();
             Console.WriteLine();
             Car.HowManyCars();
             Console.WriteLine();
-            Opel opel = new Opel(2012, "Бензин", "Черный", "Insignia I (рестайлинг) COSMO SPORT");
+            Opel opel = new Opel(2012, "Черный", "Insignia I (рестайлинг) COSMO SPORT");
             opel.ShowInfo();
             Console.WriteLine();
             BMW bMW = new BMW(2001, "Дизель", "Синий", "5 серия E39 E39 525D Restyling");
