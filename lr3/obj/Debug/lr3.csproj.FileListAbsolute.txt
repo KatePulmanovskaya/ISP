@@ -1,0 +1,7 @@
+D:\Учёба\БГУИР 2 сем\ИСП\ЛР1\lr3\lr3\bin\Debug\lr3.exe.config
+D:\Учёба\БГУИР 2 сем\ИСП\ЛР1\lr3\lr3\bin\Debug\lr3.exe
+D:\Учёба\БГУИР 2 сем\ИСП\ЛР1\lr3\lr3\bin\Debug\lr3.pdb
+D:\Учёба\БГУИР 2 сем\ИСП\ЛР1\lr3\lr3\obj\Debug\lr3.csprojResolveAssemblyReference.cache
+D:\Учёба\БГУИР 2 сем\ИСП\ЛР1\lr3\lr3\obj\Debug\lr3.csproj.CoreCompileInputs.cache
+D:\Учёба\БГУИР 2 сем\ИСП\ЛР1\lr3\lr3\obj\Debug\lr3.exe
+D:\Учёба\БГУИР 2 сем\ИСП\ЛР1\lr3\lr3\obj\Debug\lr3.pdb
