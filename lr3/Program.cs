@@ -83,14 +83,14 @@ namespace lr3
     {
         private string color; //цвет автомобиля
         private static int instances = 0; //счетчик
-        public Car(int date, string food, string color) : base(date,food)//конруктор
+        public Car(int date, string food, string color) : base(date,food)//конструктор
         {
             
             this.color = color;
             instances++;
         }
 
-        public Car(int date, string color) : base(date)//конруктор
+        public Car(int date, string color) : base(date)//конструктор
         {
 
             this.color = color;
@@ -126,12 +126,12 @@ namespace lr3
     public class Honda : Car
     {
         private string model; //номер модели
-        public Honda(int date, string food, string color, string model) : base(date, food, color) //конруктор
+        public Honda(int date, string food, string color, string model) : base(date, food, color) //конструктор
         {
             this.model = model;
         }
 
-        public Honda(int date, string color, string model) : base(date, color) //конруктор
+        public Honda(int date, string color, string model) : base(date, color) //конструктор
         {
             this.model = model;
         }
@@ -158,12 +158,12 @@ namespace lr3
     public class Opel : Car
     {
         private string model; //номер модели
-        public Opel(int date, string food, string color, string model) : base(date, food, color)//конруктор
+        public Opel(int date, string food, string color, string model) : base(date, food, color)//конструктор
         {
             this.model = model;
         }
 
-        public Opel(int date, string color, string model) : base(date, color)//конруктор
+        public Opel(int date, string color, string model) : base(date, color)//конструктор
         {
             this.model = model;
         }
@@ -191,12 +191,12 @@ namespace lr3
     public class BMW : Car
     {
         private string model; //номер модели
-        public BMW(int date, string food, string color, string model) : base(date, food, color)//конруктор
+        public BMW(int date, string food, string color, string model) : base(date, food, color)//конструктор
         {
             this.model = model;
         }
 
-        public BMW(int date, string color, string model) : base(date, color)//конруктор
+        public BMW(int date, string color, string model) : base(date, color)//конструктор
         {
             this.model = model;
         }
