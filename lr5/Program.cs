@@ -18,11 +18,11 @@ namespace lr3
         private int date_release; //год выпуска
         private string type; //тип транспорта
         Food food; //тип питания
-        public Transport(string type, int date, Food f)
+        public Transport(string type, int date, Food food)
         {
             this.type = type;
             this.date_release = date;
-            this.food = f;
+            this.food = food;
         }
         public string Type
         {
