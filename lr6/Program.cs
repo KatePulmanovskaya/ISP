@@ -146,7 +146,6 @@ namespace lr6
         {
             base.ShowInfo();
             Console.WriteLine("Номер модели: {0}", Model);
-
         }
     }
     public class BMW : Car
@@ -169,7 +168,6 @@ namespace lr6
         {
             base.ShowInfo();
             Console.WriteLine("Номер модели: {0}", Model);
-
         }
     }
     class Program
