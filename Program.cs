@@ -179,7 +179,6 @@ namespace lr7
         public int CompareTo(object obj)
         {
             if (obj == null) return 1;
-
             RationalNumber otherNumber = obj as RationalNumber;
             if (otherNumber != null)
                 return (this.n / this.m).CompareTo(otherNumber.n / otherNumber.m);
