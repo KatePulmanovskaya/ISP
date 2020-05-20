@@ -11,11 +11,13 @@ namespace lr7
     {
         private int n;
         private int m;
+        
         public RationalNumber()
         {
             n = 0;
             m = 1;
         }
+        
         public RationalNumber(int n, int m)
         {
             this.n = n;
@@ -27,6 +29,7 @@ namespace lr7
                 this.m = 1;
             }
         }
+        
         public RationalNumber(string str)
         {
             Regex regex = new Regex(@"/");
@@ -60,11 +63,13 @@ namespace lr7
                 this.m = 1;
             }
         }
+        
         public int N
         {
             get { return n; }
             set { n = value; }
         }
+        
         public int M
         {
             get { return m; }
@@ -79,11 +84,13 @@ namespace lr7
                 }
             }
         }
+        
         public override string ToString()
         {
             Console.WriteLine("Рациональное число:");
             return $"{n}/{m}";
         }
+        
         public void Show()
         {
             Console.WriteLine("Выберите формат представления числа: №1, №2, №3, №4");
@@ -108,14 +115,17 @@ namespace lr7
                     break;
             }
         }
+        
         public static RationalNumber operator +(RationalNumber number)
         {
             return number;
         }
+        
         public static RationalNumber operator -(RationalNumber number)
         {
            return new RationalNumber(-number.n, number.m);
         }
+        
         public static RationalNumber operator +(RationalNumber numberA, RationalNumber numberB)
         {
             if (numberA.m == numberB.m)
@@ -123,14 +133,17 @@ namespace lr7
             else
                 return new RationalNumber(numberA.n * numberB.m + numberB.n * numberA.m, numberA.m * numberB.m);
         }
+        
         public static RationalNumber operator -(RationalNumber numberA, RationalNumber numberB)
         {
            return numberA + (-numberB);
         }
+        
         public static RationalNumber operator *(RationalNumber numberA, RationalNumber numberB)
         {
             return new RationalNumber(numberA.n * numberB.n, numberA.m * numberB.m);
         }
+        
         public static RationalNumber operator /(RationalNumber numberA, RationalNumber numberB)
         {
             if (numberB.n == 0)
@@ -140,6 +153,7 @@ namespace lr7
             }
             return new RationalNumber(numberA.n * numberB.m, numberA.m * numberB.n);
         }
+        
         public static bool operator >(RationalNumber numberA, RationalNumber numberB)
         {
             if (numberA.n * numberB.m > numberB.n * numberA.m)
@@ -147,6 +161,7 @@ namespace lr7
             else
                 return false;
         }
+        
         public static bool operator <(RationalNumber numberA, RationalNumber numberB)
         {
             if (numberA.n * numberB.m < numberB.n * numberA.m)
@@ -154,6 +169,7 @@ namespace lr7
             else
                 return false;
         }
+        
         public static bool operator >=(RationalNumber numberA, RationalNumber numberB)
         {
             if (numberA.n * numberB.m >= numberB.n * numberA.m)
@@ -161,6 +177,7 @@ namespace lr7
             else
                 return false;
         }
+        
         public static bool operator <=(RationalNumber numberA, RationalNumber numberB)
         {
             if (numberA.n * numberB.m <= numberB.n * numberA.m)
@@ -168,14 +185,17 @@ namespace lr7
             else
                 return false;
         }
+        
         public static explicit operator double(RationalNumber number)
         {
             return (double)number.N / number.M;
         }
+        
         public static implicit operator int(RationalNumber number)
         {
             return number.N / number.M;
         }
+        
         public int CompareTo(object obj)
         {
             if (obj == null) return 1;
@@ -185,6 +205,7 @@ namespace lr7
             else
                 throw new ArgumentException("Object is not a RationalNumber");
         }
+        
         public bool Equals(RationalNumber otherNumber)
         {
             if (otherNumber == null)
@@ -194,6 +215,7 @@ namespace lr7
             else
                 return false;
         }
+        
         public override bool Equals(Object obj)
         {
             if (obj == null)
@@ -204,16 +226,19 @@ namespace lr7
             else
                 return Equals(number);
         }
+        
         public override int GetHashCode()
         {
             return n.GetHashCode() ^ m.GetHashCode();
         }
+        
         public static bool operator ==(RationalNumber numberA, RationalNumber numberB)
         {
             if (((object)numberA) == null || ((object)numberB) == null)
                 return Object.Equals(numberA, numberB);
             return numberA.Equals(numberB);
         }
+        
         public static bool operator !=(RationalNumber numberA, RationalNumber numberB)
         {
             if (((object)numberA) == null || ((object)numberB) == null)
@@ -221,6 +246,7 @@ namespace lr7
             return !(numberA.Equals(numberB));
         }
     }
+    
     class Program
     {
         static void Main(string[] args)
