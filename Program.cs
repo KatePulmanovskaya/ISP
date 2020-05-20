@@ -172,10 +172,10 @@ namespace lr7
         {
             return (double)number.N / number.M;
         }
-        //public static implicit operator int(RationalNumber number)
-        //{
-        //    return number.N / number.M;
-        //}
+        public static implicit operator int(RationalNumber number)
+        {
+            return number.N / number.M;
+        }
         public int CompareTo(object obj)
         {
             if (obj == null) return 1;
@@ -283,10 +283,10 @@ namespace lr7
                         double numderDouble = (double)numberA;
                         Console.WriteLine(Convert.ToString(numderDouble));
                         break;
-                    //case 8:
-                    //    int numderInt = numberA;
-                    //    Console.WriteLine(Convert.ToString(numderInt));
-                    //    break;
+                    case 8:
+                        int numderInt = numberA;
+                        Console.WriteLine(Convert.ToString(numderInt));
+                        break;
                     case 9:
                         break;
                     default:
